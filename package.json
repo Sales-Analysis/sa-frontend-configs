@@ -1,11 +1,12 @@
 {
   "name": "@sales-analysis/sa-frontend-configs",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
   "author": {
     "name": "Kirill Sadovnikov",
     "email": "d4rkm3z@gmail.com"
   },
+  "repository": "git://github.com/sales-analysis/sa-frontend-configs.git",
   "scripts": {
     "prettier": "prettier --config prettierrc.js --write ./**/*.js",
     "lint:ts": "eslint --color --ext .ts,.tsx,.js,.jsx .",
