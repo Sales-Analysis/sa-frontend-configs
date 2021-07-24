@@ -28,7 +28,7 @@ module.exports = function (plop) {
       },
       {
         type: 'add',
-        path: 'src/{{directory}}/{{pascalCase name}}/{{pascalCase name}}.module.scss',
+        path: 'src/{{directory}}/{{pascalCase name}}/{{pascalCase name}}.module.css',
         templateFile: `${componentTemplatesPath}/module.css.hbs`,
         abortOnFail: true,
       },
