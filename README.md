@@ -1,6 +1,7 @@
-## Configurations of SA projects
+# Configurations of SA projects
 
-#### Includes follow configurations:
+## Includes follow configurations:
+
 - ESlint
 - Prettier
 - Commitizen
@@ -8,3 +9,7 @@
 - Stylelint
 - TypeScript
 - Husky
+
+## Documentation
+
+- ### [Install](docs/install.md)
