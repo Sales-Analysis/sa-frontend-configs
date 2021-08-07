@@ -1,10 +1,28 @@
 module.exports = {
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+    jest: true,
+  },
   extends: [
     'react-app',
-    'react-app/jest'
+    'react-app/jest',
+    'plugin:@typescript-eslint/recommended',
   ],
-  plugins: ['simple-import-sort'],
+  plugins: [
+    '@typescript-eslint',
+    'simple-import-sort',
+    'react-hooks',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
+    createDefaultProgram: true,
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2019,
+    sourceType: 'module',
     project: './tsconfig.json',
   },
   rules: {
