@@ -1,3 +1,5 @@
+const prettierConfig = require('./.prettierrc.js');
+
 module.exports = {
   env: {
     browser: true,
@@ -6,15 +8,12 @@ module.exports = {
     jest: true,
   },
   extends: [
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
     'react-app',
     'react-app/jest',
-    'plugin:@typescript-eslint/recommended',
   ],
-  plugins: [
-    '@typescript-eslint',
-    'simple-import-sort',
-    'react-hooks',
-  ],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'react-hooks', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     createDefaultProgram: true,
@@ -26,6 +25,7 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
+    'prettier/prettier': ['error', prettierConfig],
     'react/prop-types': 'off',
     'no-implicit-coercion': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
@@ -37,8 +37,15 @@ module.exports = {
     {
       files: ['**/.stories.'],
       rules: {
-        'import/no-anonymous-default-export': 'off'
-      }
+        'import/no-anonymous-default-export': 'off',
+      },
+    },
+    {
+      files: '*.js',
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+      },
     },
     {
       files: ['*.ts', '*.tsx'],
@@ -78,4 +85,4 @@ module.exports = {
       },
     },
   ],
-}
+};
