@@ -1,7 +1,9 @@
-const nested = require('postcss-nested');
-
 module.exports = function createPostcssConfig() {
   return {
-    plugins: [nested()],
+    plugins: [
+      require('postcss-nested'),
+      require('postcss-import'),
+      require('autoprefixer'),
+    ],
   };
 };
